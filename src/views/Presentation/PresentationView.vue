@@ -6,7 +6,7 @@ import NavbarDefault from "../..//examples/navbars/NavbarDefault.vue";
 import DefaultFooter from "../../examples/footers/FooterDefault.vue";
 import Header from "../../examples/Header.vue";
 import FilledInfoCard from "../../examples/cards/infoCards/FilledInfoCard.vue";
-
+import MaterialButton from "@/components/MaterialButton.vue";
 //Vue Material Kit 2 components
 import MaterialSocialButton from "@/components/MaterialSocialButton.vue";
 
@@ -20,7 +20,7 @@ import PresentationTestimonials from "./Sections/PresentationTestimonials.vue";
 import PresentationInformation from "./Sections/PresentationInformation.vue";
 
 //images
-import vueMkHeader from "@/assets/img/vue-mk-header.jpg";
+import vueMkHeader from "@/assets/img/banner.jpg";
 import wavesWhite from "@/assets/img/waves-white.svg";
 import logoBootstrap from "@/assets/img/logos/bootstrap5.jpg";
 import logoTailwind from "@/assets/img/logos/icon-tailwind.jpg";
@@ -62,11 +62,10 @@ onUnmounted(() => {
               class="text-white pt-3 mt-n5 me-2"
               :style="{ display: 'inline-block ' }"
             >
-              Material Kit 2
+              SELEMAT DATANG
             </h1>
             <p class="lead text-white px-5 mt-3" :style="{ fontWeight: '500' }">
-              Start the Development With Bootstrap 5 Design System inspired by
-              Material Design.
+              Di Trade In Elektronik
             </p>
           </div>
         </div>
@@ -74,14 +73,14 @@ onUnmounted(() => {
     </div>
   </Header>
 
-  <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
-    <PresentationCounter />
+  <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n9">
+    <!-- <PresentationCounter />
     <PresentationInformation />
     <PresentationExample :data="data" />
     <PresentationPages />
-    <BuiltByDevelopers />
+    <BuiltByDevelopers /> -->
 
-    <div class="container">
+    <!-- <div class="container">
       <div class="row">
         <div class="col-lg-4">
           <FilledInfoCard
@@ -128,8 +127,8 @@ onUnmounted(() => {
         </div>
       </div>
     </div>
-    <PresentationTestimonials />
-
+    <PresentationTestimonials /> -->
+<!-- 
     <div
       class="container-fluid mt-sm-5 border-radius-xl"
       :style="{
@@ -168,14 +167,22 @@ onUnmounted(() => {
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="container">
       <div class="row">
-        <div class="d-flex flex-column w-100 text-center p-5 mb-8">
-          <h3>Available on these technologies</h3>
+        <div class="d-flex flex-column w-100 text-center p-5 mb-2">
+          <h3>Mulai Tradein in</h3>
           <div class="d-flex justify-content-center mt-3 flex-wrap">
-            <a
+            <MaterialButton
+                      class="my-4 mb-2"
+                      variant="gradient"
+                      color="info"
+                      fullWidth
+                      @click="testing"
+                      >Mulai</MaterialButton
+                    >
+            <!-- <a
               href="https://www.creative-tim.com/product/material-kit"
               data-bs-toggle="tooltip"
               data-bs-placement="bottom"
@@ -257,12 +264,12 @@ onUnmounted(() => {
                 loading="lazy"
                 :style="{ height: '90px' }"
               />
-            </a>
+            </a> -->
           </div>
         </div>
       </div>
     </div>
-    <div class="py-5">
+    <!-- <div class="py-5">
       <div class="container">
         <div class="row">
           <div class="col-lg-5 ms-auto">
@@ -291,7 +298,6 @@ onUnmounted(() => {
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
-  <DefaultFooter />
 </template>

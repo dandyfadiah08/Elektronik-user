@@ -120,7 +120,7 @@ watch(
         title="Designed and Coded by Creative Tim"
         data-placement="bottom"
       >
-        Material Kit 2
+        Tradein Elektronik
       </RouterLink>
       <RouterLink
         class="navbar-brand d-block d-md-none"
@@ -173,9 +173,9 @@ watch(
               <i
                 class="material-icons opacity-6 me-2 text-md"
                 :class="getTextColor()"
-                >dashboard</i
+                >people</i
               >
-              Pages
+              Selamat Datang, Lalisa
               <img
                 :src="getArrowColor()"
                 alt="down-arrow"
@@ -198,15 +198,15 @@ watch(
                       <div
                         class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1"
                       >
-                        Landing Pages
+                        Other
                       </div>
                       <RouterLink
-                        :to="{ name: 'about' }"
+                        :to="{ name: 'signin-basic' }"
                         class="dropdown-item border-radius-md"
                       >
-                        <span>About Us</span>
+                        <span>Log Out</span>
                       </RouterLink>
-                      <RouterLink
+                      <!-- <RouterLink
                         :to="{ name: 'contactus' }"
                         class="dropdown-item border-radius-md"
                       >
@@ -217,8 +217,8 @@ watch(
                         class="dropdown-item border-radius-md"
                       >
                         <span>Author</span>
-                      </RouterLink>
-                      <div
+                      </RouterLink> -->
+                      <!-- <div
                         class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-0 mt-3"
                       >
                         Account
@@ -228,7 +228,7 @@ watch(
                         class="dropdown-item border-radius-md"
                       >
                         <span>Sign In</span>
-                      </RouterLink>
+                      </RouterLink> -->
                     </div>
                   </div>
                 </div>
@@ -271,7 +271,7 @@ watch(
               </div>
             </div>
           </li>
-          <li class="nav-item dropdown dropdown-hover mx-2">
+          <!-- <li class="nav-item dropdown dropdown-hover mx-2">
             <a
               role="button"
               class="nav-link ps-2 d-flex cursor-pointer align-items-center"
@@ -753,8 +753,8 @@ watch(
                 </div>
               </div>
             </div>
-          </li>
-          <li class="nav-item dropdown dropdown-hover mx-2">
+          </li> -->
+          <!-- <li class="nav-item dropdown dropdown-hover mx-2">
             <a
               role="button"
               class="nav-link ps-2 d-flex cursor-pointer align-items-center"
@@ -907,8 +907,8 @@ watch(
                 </div>
               </div>
             </div>
-          </li>
-          <li class="nav-item dropdown dropdown-hover mx-2">
+          </li> -->
+          <!-- <li class="nav-item dropdown dropdown-hover mx-2">
             <a
               href="https://www.github.com/creativetimofficial/vue-material-kit"
               class="nav-link d-flex cursor-pointer align-items-center"
@@ -928,9 +928,9 @@ watch(
               </svg>
               Github
             </a>
-          </li>
+          </li> -->
         </ul>
-        <ul class="navbar-nav d-lg-block d-none">
+        <!-- <ul class="navbar-nav d-lg-block d-none">
           <li class="nav-item">
             <a
               :href="action.route"
@@ -940,7 +940,7 @@ watch(
               >{{ action.label }}</a
             >
           </li>
-        </ul>
+        </ul> -->
       </div>
     </div>
   </nav>
