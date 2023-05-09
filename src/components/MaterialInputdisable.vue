@@ -1,5 +1,4 @@
 <script setup>
-
 defineProps({
   id: {
     type: String,
@@ -81,6 +80,7 @@ function getClasses(size, success, error) {
     <input
       :id="id"
       :type="type"
+      readonly
       class="form-control"
       :class="[getClasses(size, success, error), inputClass]"
       :value="value"

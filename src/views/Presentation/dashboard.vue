@@ -2,34 +2,33 @@
 import { onMounted, onUnmounted } from "vue";
 
 //example components
-import NavbarDefault from "../..//examples/navbars/NavbarDefault.vue";
-import DefaultFooter from "../../examples/footers/FooterDefault.vue";
+import NavbarDefault from "../../examples/navbars/NavbarDefault.vue";
 import Header from "../../examples/Header.vue";
-import FilledInfoCard from "../../examples/cards/infoCards/FilledInfoCard.vue";
-import MaterialButton from "@/components/MaterialButton.vue";
-//Vue Material Kit 2 components
-import MaterialSocialButton from "@/components/MaterialSocialButton.vue";
+// import FilledInfoCard from "../../examples/cards/infoCards/FilledInfoCard.vue";
+// import MaterialButton from "@/components/MaterialButton.vue";
+// //Vue Material Kit 2 components
+// import MaterialSocialButton from "@/components/MaterialSocialButton.vue";
 
 // sections
-import PresentationCounter from "./Sections/PresentationCounter.vue";
-import PresentationPages from "./Sections/PresentationPages.vue";
-import PresentationExample from "./Sections/PresentationExample.vue";
-import data from "./Sections/Data/designBlocksData";
-import BuiltByDevelopers from "./Components/BuiltByDevelopers.vue";
-import PresentationTestimonials from "./Sections/PresentationTestimonials.vue";
-import PresentationInformation from "./Sections/PresentationInformation.vue";
+// import PresentationCounter from "./Sections/PresentationCounter.vue";
+// import PresentationPages from "./Sections/PresentationPages.vue";
+// import PresentationExample from "./Sections/PresentationExample.vue";
+// import data from "./Sections/Data/designBlocksData";
+// import BuiltByDevelopers from "./Components/BuiltByDevelopers.vue";
+// import PresentationTestimonials from "./Sections/PresentationTestimonials.vue";
+// import PresentationInformation from "./Sections/PresentationInformation.vue";
 
 //images
 import vueMkHeader from "@/assets/img/banner.jpg";
-import wavesWhite from "@/assets/img/waves-white.svg";
-import logoBootstrap from "@/assets/img/logos/bootstrap5.jpg";
-import logoTailwind from "@/assets/img/logos/icon-tailwind.jpg";
-import logoVue from "@/assets/img/logos/vue.jpg";
-import logoAngular from "@/assets/img/logos/angular.jpg";
-import logoReact from "@/assets/img/logos/react.jpg";
-import logoSketch from "@/assets/img/logos/sketch.jpg";
+// import wavesWhite from "@/assets/img/waves-white.svg";
+// import logoBootstrap from "@/assets/img/logos/bootstrap5.jpg";
+// import logoTailwind from "@/assets/img/logos/icon-tailwind.jpg";
+// import logoVue from "@/assets/img/logos/vue.jpg";
+// import logoAngular from "@/assets/img/logos/angular.jpg";
+// import logoReact from "@/assets/img/logos/react.jpg";
+// import logoSketch from "@/assets/img/logos/sketch.jpg";
 
-//hooks
+// //hooks
 const body = document.getElementsByTagName("body")[0];
 onMounted(() => {
   body.classList.add("presentation-page");
@@ -39,8 +38,14 @@ onUnmounted(() => {
   body.classList.remove("presentation-page");
   body.classList.remove("bg-gray-200");
 });
-</script>
+ const msg = 'Hello!'
 
+const log = ()=>{
+  console.log(msg)
+}
+
+
+</script>
 <template>
   <div class="container position-sticky z-index-sticky top-0">
     <div class="row">
@@ -169,19 +174,14 @@ onUnmounted(() => {
       </div>
     </div> -->
 
-    <div class="container">
+    <div class="container" >
       <div class="row">
         <div class="d-flex flex-column w-100 text-center p-5 mb-2">
           <h3>Mulai Tradein in</h3>
           <div class="d-flex justify-content-center mt-3 flex-wrap">
-            <MaterialButton
-                      class="my-4 mb-2"
-                      variant="gradient"
-                      color="info"
-                      fullWidth
-                      @click="testing"
-                      >Mulai</MaterialButton
-                    >
+            <button type="submit" @click="log" class="btn bg-success text-white">
+              mulai
+            </button>
             <!-- <a
               href="https://www.creative-tim.com/product/material-kit"
               data-bs-toggle="tooltip"

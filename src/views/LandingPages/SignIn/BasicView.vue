@@ -19,21 +19,111 @@ onMounted(() => {
 
 </script>
 <script>
+import {Axios} from "axios"
+import jwt_decode from "jwt-decode";
+import Toastify from 'toastify-js'
+import "toastify-js/src/toastify.css"
+import { urlbase } from '../../Page/global.js'
 export default {
-    name: 'my-component',
+    name: 'login',
     data () {
       return {
         username : '',
         password : '',
       }
     },
+    mounted () {
+      localStorage.clear();
+    },
     methods:{
       testing(){
-        console.log(username.value)
-        console.log(password.value)
+        var myHeaders = new Headers();
+        myHeaders.append("Cookie", "ci_session=dkkl00dheeihlh0u48vetnopra2mhqen");
+        var formdata = new FormData();
+        formdata.append("username", username.value);
+        formdata.append("password", password.value);
+
+        var requestOptions = {
+          method: 'POST',
+           headers: myHeaders,
+           body: formdata,
+           redirect: 'follow'
+};
+      var url = urlbase.URL + "/api/LoginUser"
+      fetch(url, requestOptions)
+      .then(response => response.json())
+     .then(result => {
+      if (result.success == true) {
+        var decode = jwt_decode(result.data.token)
+        console.log(decode)
+        document.cookie = "token="+result.data.token
+        window.localStorage.setItem("jwt",result.data.token)
+        window.localStorage.setItem("alamat_te",decode.data.alamat_te)
+        window.localStorage.setItem("fullname",decode.data.fullname)
+        window.localStorage.setItem("id_mitra",decode.data.id_mitra)
+        window.localStorage.setItem("id_toko",decode.data.id_toko)
+        window.localStorage.setItem("nama_te",decode.data.nama_te)
+        window.localStorage.setItem("parent_id",decode.data.parent_id)
+        window.localStorage.setItem("status",decode.data.status)
+        window.localStorage.setItem("user",decode.data.user)
+        window.localStorage.setItem("user_type",decode.data.user_type)
+        window.localStorage.setItem("id_mitra",decode.data.id_mitra)
+        window.localStorage.setItem("user_id",decode.data.user_id)
+         window.location.href= urlbase.ROUTES + '/tradein'
+      } else {
+        if (username.value != '' && password.value != '') {
+          Toastify({
+            text:" "+ result.message + " !",
+            duration: 3000,
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "left", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+            background: "linear-gradient(to right, rgba(227,53,71,1) 34%, rgba(233,34,24,1) 100%)",
+            },
+          }).showToast();
+          console.log(localStorage.key("jwt"))
+        } else {
+          if (username.value == '') {
+            Toastify({
+            text:" Username tidak boleh kosong !",
+            duration: 3000,
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "left", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+            background: "linear-gradient(to right, rgba(227,53,71,1) 34%, rgba(233,34,24,1) 100%)",
+            },
+          }).showToast();
+          }
+          if (password.value == '') {
+            Toastify({
+            text:" password tidak boleh kosong !",
+            duration: 3000,
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "left", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+            background: "linear-gradient(to right, rgba(227,53,71,1) 34%, rgba(233,34,24,1) 100%)",
+            },
+          }).showToast();
+          }
+        }
+      }
+    })
+     .catch(error => console.log('error', error));
+ 
       }
     }
+    
 }
+
 </script>
 <template>
   <Header>
@@ -61,23 +151,22 @@ export default {
                 </div>
               </div>
               <div class="card-body">
+                
                   <MaterialInput
                     id="username"
-                    
+                    autcomplate="false"
                     v-model="username"
                     class="input-group-outline my-3"
-                    :label="{ text: 'username', class: 'form-label' }"
+                    placeholder="Username"
                     type="text"
                   />
                     <MaterialInput
-                    aria-valuetext=""
                     id="password"
                     v-model="password"
+                    placeholder="password"
                     class="input-group-outline mb-3"
-                    :label="{ text: 'Password', class: 'form-label' }"
                     type="password"
                   />
-
                   <div class="text-center">
                     <MaterialButton
                       class="my-4 mb-2"
@@ -96,65 +185,6 @@ export default {
           </div>
         </div>
       </div>
-      <!-- <footer class="footer position-absolute bottom-2 py-2 w-100">
-        <div class="container">
-          <div class="row align-items-center justify-content-lg-between">
-            <div class="col-12 col-md-6 my-auto">
-              <div
-                class="copyright text-center text-sm text-white text-lg-start"
-              >
-                © {{ new Date().getFullYear() }}, made with
-                <i class="fa fa-heart" aria-hidden="true"></i> by
-                <a
-                  href="https://www.creative-tim.com"
-                  class="font-weight-bold text-white"
-                  target="_blank"
-                  >Creative Tim</a
-                >
-                for a better web.
-              </div>
-            </div>
-            <div class="col-12 col-md-6">
-              <ul
-                class="nav nav-footer justify-content-center justify-content-lg-end"
-              >
-                <li class="nav-item">
-                  <a
-                    href="https://www.creative-tim.com"
-                    class="nav-link text-white"
-                    target="_blank"
-                    >Creative Tim</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="https://www.creative-tim.com/presentation"
-                    class="nav-link text-white"
-                    target="_blank"
-                    >About Us</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="https://www.creative-tim.com/blog"
-                    class="nav-link text-white"
-                    target="_blank"
-                    >Blog</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="https://www.creative-tim.com/license"
-                    class="nav-link pe-0 text-white"
-                    target="_blank"
-                    >License</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer> -->
     </div>
   </Header>
 </template>

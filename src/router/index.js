@@ -1,5 +1,14 @@
 import { createRouter, createWebHistory } from "vue-router";
-import PresentationView from "../views/Presentation/PresentationView.vue";
+import dashboard from "../views/Page/dashboard.vue";
+import toko from "../views/Page/toko.vue";
+import review from "../views/Page/review.vue"; 
+import summary from "../views/Page/summary.vue"
+import pameran from "../views/Page/pameran.vue";
+import member from "../views/Page/member.vue"
+import modelproduct from "../views/Page/modelProduct.vue"
+import kuisioner from "../views/Page/kuisioner.vue";
+import identitas from "../views/Page/identitas.vue";
+import notfound from "../views/Page/404.vue"
 import AboutView from "../views/LandingPages/AboutUs/AboutView.vue";
 import ContactView from "../views/LandingPages/ContactUs/ContactView.vue";
 import AuthorView from "../views/LandingPages/Author/AuthorView.vue";
@@ -32,120 +41,165 @@ const router = createRouter({
       component:  SignInBasicView,
     },
     {
-      path: "/pages/landing-pages/about-us",
-      name: "about",
-      component: AboutView,
-    },
-    {
-      path: "/pages/landing-pages/contact-us",
-      name: "contactus",
-      component: ContactView,
-    },
-    {
-      path: "/pages/landing-pages/author",
-      name: "author",
-      component: AuthorView,
-    },
-    {
       path: "/tradein",
-      name: "presentation",
-      component: PresentationView,
+      name: "tradein",
+      component: dashboard,
     },
     {
-      path: "/sections/page-sections/page-headers",
-      name: "page-headers",
-      component: PageHeaders,
+      path: "/identitas-toko",
+      name: "toko",
+      component: toko,
     },
     {
-      path: "/sections/page-sections/features",
-      name: "page-features",
-      component: PageFeatures,
+      path: "/review",
+      name: "review",
+      component: review,
     },
     {
-      path: "/sections/navigation/navbars",
-      name: "navigation-navbars",
-      component: NavigationNavbars,
+      path: "/identitas-member",
+      name: "member",
+      component: member,
     },
     {
-      path: "/sections/navigation/nav-tabs",
-      name: "navigation-navtabs",
-      component: NavigationNavTabs,
+      path: "/summary",
+      name: "summary",
+      component: summary,
     },
     {
-      path: "/sections/navigation/pagination",
-      name: "navigation-pagination",
-      component: NavigationPagination,
+      path: "/kuisioner",
+      name: "kuisioner",
+      component: kuisioner,
     },
     {
-      path: "/sections/input-areas/inputs",
-      name: "inputareas-inputs",
-      component: InputAreasInputs,
+      path: "/pameran",
+      name: "pameran",
+      component: pameran,
     },
     {
-      path: "/sections/input-areas/forms",
-      name: "inputareas-forms",
-      component: InputAreasForms,
+      path: "/identitas",
+      name: "identitas",
+      component: identitas,
     },
     {
-      path: "/sections/attention-catchers/alerts",
-      name: "ac-alerts",
-      component: ACAlerts,
+      path: "/model-product",
+      name: "modelproduct",
+      component: modelproduct,
     },
     {
-      path: "/sections/attention-catchers/modals",
-      name: "ac-modals",
-      component: ACModals,
+      path: "/:pathMatch(.*)*",
+      name: "notfound",
+      component: notfound,
     },
-    {
-      path: "/sections/attention-catchers/tooltips-popovers",
-      name: "ac-tooltips-popovers",
-      component: ACTooltipsPopovers,
-    },
-    {
-      path: "/sections/elements/avatars",
-      name: "el-avatars",
-      component: ElAvatars,
-    },
-    {
-      path: "/sections/elements/badges",
-      name: "el-badges",
-      component: ElBadges,
-    },
-    {
-      path: "/sections/elements/breadcrumbs",
-      name: "el-breadcrumbs",
-      component: ElBreadcrumbs,
-    },
-    {
-      path: "/sections/elements/buttons",
-      name: "el-buttons",
-      component: ElButtons,
-    },
-    {
-      path: "/sections/elements/button-groups",
-      name: "el-button-groups",
-      component: ElButtonGroups,
-    },
-    {
-      path: "/sections/elements/dropdowns",
-      name: "el-dropdowns",
-      component: ElDropdowns,
-    },
-    {
-      path: "/sections/elements/progress-bars",
-      name: "el-progress-bars",
-      component: ElProgressBars,
-    },
-    {
-      path: "/sections/elements/toggles",
-      name: "el-toggles",
-      component: ElToggles,
-    },
-    {
-      path: "/sections/elements/typography",
-      name: "el-typography",
-      component: ElTypography,
-    },
+    // {
+    //   path: "/pages/landing-pages/about-us",
+    //   name: "about",
+    //   component: AboutView,
+    // },
+    // {
+    //   path: "/pages/landing-pages/contact-us",
+    //   name: "contactus",
+    //   component: ContactView,
+    // },
+    // {
+    //   path: "/pages/landing-pages/author",
+    //   name: "author",
+    //   component: AuthorView,
+    // },
+    // {
+    //   path: "/sections/page-sections/page-headers",
+    //   name: "page-headers",
+    //   component: PageHeaders,
+    // },
+    // {
+    //   path: "/sections/page-sections/features",
+    //   name: "page-features",
+    //   component: PageFeatures,
+    // },
+    // {
+    //   path: "/sections/navigation/navbars",
+    //   name: "navigation-navbars",
+    //   component: NavigationNavbars,
+    // },
+    // {
+    //   path: "/sections/navigation/nav-tabs",
+    //   name: "navigation-navtabs",
+    //   component: NavigationNavTabs,
+    // },
+    // {
+    //   path: "/sections/navigation/pagination",
+    //   name: "navigation-pagination",
+    //   component: NavigationPagination,
+    // },
+    // {
+    //   path: "/sections/input-areas/inputs",
+    //   name: "inputareas-inputs",
+    //   component: InputAreasInputs,
+    // },
+    // {
+    //   path: "/sections/input-areas/forms",
+    //   name: "inputareas-forms",
+    //   component: InputAreasForms,
+    // },
+    // {
+    //   path: "/sections/attention-catchers/alerts",
+    //   name: "ac-alerts",
+    //   component: ACAlerts,
+    // },
+    // {
+    //   path: "/sections/attention-catchers/modals",
+    //   name: "ac-modals",
+    //   component: ACModals,
+    // },
+    // {
+    //   path: "/sections/attention-catchers/tooltips-popovers",
+    //   name: "ac-tooltips-popovers",
+    //   component: ACTooltipsPopovers,
+    // },
+    // {
+    //   path: "/sections/elements/avatars",
+    //   name: "el-avatars",
+    //   component: ElAvatars,
+    // },
+    // {
+    //   path: "/sections/elements/badges",
+    //   name: "el-badges",
+    //   component: ElBadges,
+    // },
+    // {
+    //   path: "/sections/elements/breadcrumbs",
+    //   name: "el-breadcrumbs",
+    //   component: ElBreadcrumbs,
+    // },
+    // {
+    //   path: "/sections/elements/buttons",
+    //   name: "el-buttons",
+    //   component: ElButtons,
+    // },
+    // {
+    //   path: "/sections/elements/button-groups",
+    //   name: "el-button-groups",
+    //   component: ElButtonGroups,
+    // },
+    // {
+    //   path: "/sections/elements/dropdowns",
+    //   name: "el-dropdowns",
+    //   component: ElDropdowns,
+    // },
+    // {
+    //   path: "/sections/elements/progress-bars",
+    //   name: "el-progress-bars",
+    //   component: ElProgressBars,
+    // },
+    // {
+    //   path: "/sections/elements/toggles",
+    //   name: "el-toggles",
+    //   component: ElToggles,
+    // },
+    // {
+    //   path: "/sections/elements/typography",
+    //   name: "el-typography",
+    //   component: ElTypography,
+    // },
   ],
 });
 

@@ -26,7 +26,28 @@ html {
     background-color: $blur-dark-background;
   }
 }
+.blur2 {
+  box-shadow: $blur-box-shadow;
+  -webkit-backdrop-filter: $blur-backdrop-filter;
+  backdrop-filter: $blur-backdrop-filter;
+  background-color: white !important;
 
+  &.saturation-less {
+    -webkit-backdrop-filter: $blur-backdrop-filter-less;
+    backdrop-filter: $blur-backdrop-filter-less;
+  }
+
+  &.blur-rounded {
+    border-radius: $blur-border-radius-rounded;
+  }
+
+  &.blur-light {
+    background-color: $blur-light-background;
+  }
+  &.blur-dark {
+    background-color: $blur-dark-background;
+  }
+}
 .shadow-blur {
   box-shadow: $shadow-blur-box-shadow !important;
 }

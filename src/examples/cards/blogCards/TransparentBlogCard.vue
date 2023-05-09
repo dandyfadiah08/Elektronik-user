@@ -8,7 +8,7 @@ defineProps({
     type: String,
     required: true,
   },
-  description: {
+  id: {
     type: String,
     required: true,
   },
@@ -18,20 +18,25 @@ defineProps({
     color: String,
     label: String,
     default: () => ({
-      route: "javascript:;",
+      route: "/",
       color: "success",
-      label: "Read more",
+      label: "Pilih Kategori",
     }),
   },
 });
+function coba(params) {
+  console.log(params)
+}
 </script>
 <template>
   <div class="card card-plain">
     <div class="card-header p-0 position-relative">
-      <a class="d-block blur-shadow-image">
+      <a href="#" class="d-block blur-shadow-image">
         <img
+        style="width: 100%;height: 160px"
           :src="image"
           :alt="title"
+          :id="id"
           class="img-fluid shadow border-radius-lg"
           loading="lazy"
         />
@@ -39,19 +44,17 @@ defineProps({
     </div>
     <div class="card-body px-0">
       <h5>
-        <a :href="action.route" class="text-dark font-weight-bold">{{
+        <a href="#"  class="text-dark font-weight-bold">{{
           title
         }}</a>
       </h5>
-      <p>
-        {{ description }}
-      </p>
       <a
-        :href="action.route"
+        href="#"
         class="text-sm icon-move-right"
         :class="`text-${action.color}`"
         >{{ action.label }}
-        <i class="fas fa-arrow-right text-xs ms-1"></i>
+        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+
       </a>
     </div>
   </div>

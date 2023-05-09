@@ -7,7 +7,9 @@ import { useWindowsWidth } from "../../assets/js/useWindowsWidth";
 import ArrDark from "@/assets/img/down-arrow-dark.svg";
 import downArrow from "@/assets/img/down-arrow.svg";
 import DownArrWhite from "@/assets/img/down-arrow-white.svg";
-
+import { urlbase } from '../../views/Page/global.js';
+const toko = window.localStorage.getItem("nama_te")
+const user = window.localStorage.getItem("user")
 const props = defineProps({
   action: {
     type: Object,
@@ -52,7 +54,10 @@ function getArrowColor() {
     return ArrDark;
   }
 }
-
+function logout() {
+  window.localStorage.clear()
+  window.location.href= urlbase.ROUTES + '/'
+}
 // set text color
 const getTextColor = () => {
   let color;
@@ -115,12 +120,12 @@ watch(
             ? 'text-dark font-weight-bolder ms-sm-3'
             : 'text-white font-weight-bolder ms-sm-3'
         ]"
-        :to="{ name: 'presentation' }"
+        :to="{ name: 'tradein' }"
         rel="tooltip"
         title="Designed and Coded by Creative Tim"
         data-placement="bottom"
       >
-        Tradein Elektronik
+      <img src="../../../src/assets/img/Logo-Hitam.png" style="width: 130px;" class=" border-radius-md " alt="">
       </RouterLink>
       <RouterLink
         class="navbar-brand d-block d-md-none"
@@ -134,13 +139,13 @@ watch(
         title="Designed and Coded by Creative Tim"
         data-placement="bottom"
       >
-        Material Design
+      <img src="../../../src/assets/img/Logo-Hitam.png" style="width: 130px;" class=" border-radius-md " alt="">
       </RouterLink>
-      <a
+      <!-- <a
         href="https://www.creative-tim.com/product/vue-material-kit-pro"
         class="btn btn-sm bg-gradient-success mb-0 ms-auto d-lg-none d-block"
         >Buy Now</a
-      >
+      > -->
       <button
         class="navbar-toggler shadow-none ms-2"
         type="button"
@@ -175,7 +180,7 @@ watch(
                 :class="getTextColor()"
                 >people</i
               >
-              Selamat Datang, Lalisa
+              Selamat Datang, {{ toko }}({{ user }})
               <img
                 :src="getArrowColor()"
                 alt="down-arrow"
@@ -200,12 +205,12 @@ watch(
                       >
                         Other
                       </div>
-                      <RouterLink
-                        :to="{ name: 'signin-basic' }"
+                      <button
+                        @click ="logout"
                         class="dropdown-item border-radius-md"
                       >
                         <span>Log Out</span>
-                      </RouterLink>
+                      </button>
                       <!-- <RouterLink
                         :to="{ name: 'contactus' }"
                         class="dropdown-item border-radius-md"
@@ -237,37 +242,37 @@ watch(
                 <div
                   class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-0"
                 >
-                  Landing Pages
+                  Other
                 </div>
-                <RouterLink
+                <!-- <RouterLink
                   :to="{ name: 'about' }"
                   class="dropdown-item border-radius-md"
                 >
-                  <span>About Us</span>
-                </RouterLink>
-                <RouterLink
+                  <span>Log out</span>
+                </RouterLink> -->
+                <!-- <RouterLink
                   :to="{ name: 'contactus' }"
                   class="dropdown-item border-radius-md"
                 >
                   <span>Contact Us</span>
-                </RouterLink>
-                <RouterLink
+                </RouterLink> -->
+                <!-- <RouterLink
                   :to="{ name: 'author' }"
                   class="dropdown-item border-radius-md"
                 >
                   <span>Author</span>
-                </RouterLink>
-                <div
+                </RouterLink> -->
+                <!-- <div
                   class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-0 mt-3"
                 >
                   Account
-                </div>
-                <RouterLink
-                  :to="{ name: 'signin-basic' }"
+                </div> -->
+                <button
                   class="dropdown-item border-radius-md"
+                  @click ="logout"
                 >
-                  <span>Sign In</span>
-                </RouterLink>
+                  <span>Log Out</span>
+                </button>
               </div>
             </div>
           </li>
