@@ -14,23 +14,23 @@ This free VueJS 3 & Bootstrap 5 template is coming with pre-built design blocks,
 switching from our pages to the real website is very easy to be done.
 View [all components here.](https://www.creative-tim.com/learning-lab/vue/alerts/material-kit/) -->
 
-**Documentation built by Developers**
+<!-- **Documentation built by Developers** -->
 
 <!-- Each element is well presented in very complex documentation.
 You can read more about the [documentation here](https://www.creative-tim.com/learning-lab/vue/overview/material-kit/). -->
 
-**Example Pages**
+<!-- **Example Pages** -->
 
 <!-- If you want to get inspiration or just show something directly to your clients, you can jump-start your development with our pre-built example pages. You will be able to quickly set up the basic structure for your web project.
 
 View [example pages here.](https://demos.creative-tim.com/vue-material-kit/) -->
 
-**HELPFUL LINKS**
+<!-- **HELPFUL LINKS** -->
 
 <!-- - View [Github Repository](https://github.com/creativetimofficial/vue-material-kit)
 - Check [FAQ Page](https://www.creative-tim.com/faq) -->
 
-#### Special thanks
+<!-- #### Special thanks -->
 
 <!-- During the development of this dashboard, we have used many existing resources from awesome developers. We want to thank them for providing their tools open source:
 
@@ -45,7 +45,9 @@ View [example pages here.](https://demos.creative-tim.com/vue-material-kit/) -->
 
 <!-- Let us know your thoughts below. And good luck with development! -->
 
-## Table of Contents
+## ELEKTRONIK
+
+admin Elektronik VueJS 3 VITE & Bootstrap 5 template
 
 <!-- - [Versions](#versions)
 - [Demo](#demo)
@@ -60,6 +62,8 @@ View [example pages here.](https://demos.creative-tim.com/vue-material-kit/) -->
 - [Useful Links](#useful-links) -->
 
 ## Versions
+
+3.0.0
 
 <!--
 [<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/vue-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/vue-material-kit?ref=readme-vmk)
@@ -153,13 +157,13 @@ vue-material-kit-2
     └── vite.config.js
 ``` -->
 
-## Browser Support
+<!-- ## Browser Support -->
 
 <!-- At present, we officially aim to support the last two versions of the following browsers:
 
 <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64"> -->
 
-## Resources
+<!-- ## Resources -->
 
 <!-- - [Live Preview](https://demos.creative-tim.com/vue-material-kit/#/?ref=readme-vmk)
 - [Buy Page](https://www.creative-tim.com/product/vue-material-kit?ref=readme-vmk)
@@ -168,7 +172,7 @@ vue-material-kit-2
 - [Support](https://www.creative-tim.com/contact-us?ref=readme-vmk)
 - Issues: [Github Issues Page](https://github.com/creativetimofficial/vue-material-kit/issues) -->
 
-## Reporting Issues
+<!-- ## Reporting Issues -->
 
 <!-- We use GitHub Issues as the official bug tracker for the Vue Material Kit 2. Here are some advices for our users that want to report an issue:
 
@@ -176,16 +180,16 @@ vue-material-kit-2
 2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
 3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help. -->
 
-## Technical Support or Questions
+<!-- ## Technical Support or Questions -->
 
 <!-- If you have questions or need help integrating the product please [contact us](https://www.creative-tim.com/contact-us?ref=readme-vmk) instead of opening an issue. -->
 
-## Licensing
+<!-- ## Licensing -->
 
 <!-- - Copyright 2022 [Creative Tim](https://www.creative-tim.com?ref=readme-vmk)
 - Creative Tim [license](https://www.creative-tim.com/license?ref=readme-vmk) -->
 
-## Useful Links
+<!-- ## Useful Links -->
 
 <!-- - [More products](https://www.creative-tim.com/templates?ref=readme-vmk) from Creative Tim
 
@@ -195,7 +199,7 @@ vue-material-kit-2
 
 - [Affiliate Program](https://www.creative-tim.com/affiliates/new?ref=readme-vmk) (earn money) -->
 
-##### Social Media
+<!-- ##### Social Media -->
 
 <!-- Twitter: <https://twitter.com/CreativeTim>
 
