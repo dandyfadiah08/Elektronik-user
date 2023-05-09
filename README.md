@@ -75,28 +75,32 @@ admin Elektronik VueJS 3 VITE & Bootstrap 5 template
 
 ## Demo
 
+1. Git clone
+2. npm i
+3. npm run dev
 <!-- - [Landing page](https://demos.creative-tim.com/vue-material-kit/#/pages/landing-pages/about-us?ref=readme-mkrp)
+
 - [Author page](https://demos.creative-tim.com/vue-material-kit/#/pages/landing-pages/author?ref=readme-mkrp)
 - [Sign in page](https://demos.creative-tim.com/vue-material-kit/#/pages/landing-pages/basic?ref=readme-mkrp)
 
 [View More](https://demos.creative-tim.com/vue-material-kit/#/?ref=readme-mkp). -->
 
-## Quick start
+<!-- ## Quick start -->
 
 <!-- Quick start options:
 
 - Buy from [Creative Tim](https://www.creative-tim.com/product/vue-material-kit?ref=readme-vmk). -->
 
-## Terminal Commands
+<!-- ## Terminal Commands -->
 
 <!-- 1. Download and Install NodeJs LTS version from [NodeJs Official Page](https://nodejs.org/en/download/).
 2. Navigate to the root ./ directory of the product and run `yarn install` or `npm install` to install our local dependencies. -->
 
-## Documentation
+<!-- ## Documentation -->
 
 <!-- The documentation for the Material Kit is hosted at our [website](https://www.creative-tim.com/learning-lab/vue/overview/material-kit/?ref=readme-vmk). -->
 
-### What's included
+<!-- ### What's included -->
 
 <!-- Within the download you'll find the following directories and files:
 
